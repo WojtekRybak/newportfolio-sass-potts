@@ -1,0 +1,249 @@
+@use 'utilities';
+@import 'mobile';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'Fira Sans', sans-serif;
+}
+.container {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-left: 128px;
+  padding-right: 128px;
+}
+.button {
+  display: inline-block;
+  color: #fff;
+  background-color: #ff9fdb;
+  padding: 0.8rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+img {
+  max-width: 100%;
+}
+header {
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  // background-color: #12002f;
+  .container {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+
+    h2 {
+      color: inherit;
+      text-transform: uppercase;
+      font-size: 2rem;
+      font-weight: 900;
+      span {
+        font-weight: 400;
+      }
+    }
+    nav {
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: repeat(4, auto);
+
+      a {
+        color: inherit;
+        font-size: 1.4rem;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+main {
+  .banner {
+    color: #fff;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('../assets/img/img1.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+      background-color: #12002f;
+      opacity: 0.7;
+    }
+    .container {
+      position: relative;
+      z-index: 1;
+      span {
+        color: #ff9fdb;
+      }
+      h1 {
+        font-size: 4rem;
+        color: inherit;
+        span {
+          color: #ff9fdb;
+        }
+      }
+    }
+  }
+}
+
+.services {
+  //   background-color: rgb(243, 241, 241);
+
+  .container {
+    height: 30vh;
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      .service {
+        .img-box {
+          width: 4rem;
+          height: 4rem;
+          margin: 0 auto;
+          img {
+            width: 74px;
+            height: 100px;
+            filter: grayscale(100%);
+          }
+        }
+      }
+    }
+  }
+}
+
+.projects {
+  background-color: rgb(243, 241, 241);
+  //   background-color: rgb(209, 207, 207);
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+  text-align: center;
+  h2 {
+    padding-bottom: 1.5rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #313131;
+  }
+  .projects-grid {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+
+    @media (max-width: 756px) {
+      grid-template-columns: 1fr;
+    }
+    .project {
+      h3 {
+        font-size: 1.5rem;
+        color: #313131;
+        margin-bottom: 1.5rem;
+      }
+      .tech {
+        background-color: #12002f;
+        border-radius: 0;
+        font-weight: 400;
+        padding: 0.5rem 0.8rem;
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+.about {
+  margin-top: 8rem;
+  //   background-color: rgb(243, 241, 241);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  h2 {
+    padding-bottom: 1.5rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #313131;
+    text-align: center;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      padding: 0.25rem;
+      border-radius: 50%;
+    }
+    p {
+      margin-top: 2rem;
+      text-align: center;
+      font-style: italic;
+      font-size: 1.4rem;
+    }
+    span {
+      color: #ff9fdb;
+    }
+    .tech-list {
+      font-weight: 700;
+      color: #313131;
+    }
+  }
+}
+.contact {
+  height: 100%;
+  margin-top: 5rem;
+  h2 {
+    padding-bottom: 1.5rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #313131;
+    text-align: center;
+  }
+  .contact-data {
+    display: flex;
+    justify-content: center;
+    p {
+      color: #fff;
+      background-color: #12002f;
+      margin: 1rem;
+      padding-top: 0.8rem 1rem;
+    }
+  }
+}
+
+.footer {
+  margin-top: 6rem;
+  height: 4rem;
+  background-color: #12002f;
+  p {
+    color: #fff;
+    text-align: center;
+    padding-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 756px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
