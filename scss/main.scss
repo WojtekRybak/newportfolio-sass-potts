@@ -12,8 +12,8 @@
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
-  padding-left: 128px;
-  padding-right: 128px;
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 .button {
   display: inline-block;
@@ -29,7 +29,7 @@ img {
   max-width: 100%;
 }
 header {
-  color: #fff;
+  color: rgb(209, 207, 207);
   position: fixed;
   top: 0;
   left: 0;
@@ -242,8 +242,11 @@ main {
   }
 }
 
-@media screen and (max-width: 756px) {
-  .container {
-    padding: 0 1rem;
-  }
-}
+// @media screen and (max-width: 756px) {
+//   .container {
+//     margin: 0 auto;
+//     nav a {
+//       font-size: 3rem;
+//     }
+//   }
+// }
