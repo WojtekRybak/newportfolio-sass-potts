@@ -186,6 +186,10 @@ main .banner .container h1 span {
   color: #313131;
 }
 
+.projects .app-title {
+  font-weight: bold;
+}
+
 .projects .projects-grid {
   margin-top: 3rem;
   display: -ms-grid;
